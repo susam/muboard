@@ -40,8 +40,6 @@ Perform the following tasks for every release:
 
   - Publish documentation and examples.
 
-        make site
-        make live
         make pushlive
 
 
