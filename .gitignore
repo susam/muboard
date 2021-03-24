@@ -1,0 +1,9 @@
+*.sw?
+*~
+\#*\#
+.\#*
+/package-lock.json
+/node_modules/
+/docs/
+_site/
+.DS_Store

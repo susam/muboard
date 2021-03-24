@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>The Möbius function</title>
+<script src="../muboard.js"></script>
+<textarea>
+# The Möbius function
+
+For any positive integer $ n $, the Möbius function $ \mu(n) $ is
+defined as follows:
+
+$$ \mu(1) = 1; $$
+
+If $ n > 1, $ write $ n = p_1^{a_1} \dots p_2^{a_k} $ (prime
+factorization). Then
+
+\begin{align*}
+  \mu(n) & = (-1)^k \text{ if } a_1 = a_2 = \dots = a_k = 1, \\
+  \mu(n) & = 0 \text{ otherwise}.
+\end{align*}
+
+If $ n \ge 1, $ we have
+
+$$
+  \sum_{d \mid n} \mu(d) =
+  \begin{cases}
+    1 & \text{ if } n = 1, \\
+    0 & \text{ if } n > 1.
+  \end{cases}
+$$
+</textarea>
