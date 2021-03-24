@@ -11,6 +11,7 @@ site:
 live:
 	git branch -D live || true
 	git switch -f --orphan live
+	rm -rf node_modules package-lock.json
 	mv _site/* .
 	git config user.name "live"
 	git config user.email "live@localhost"
@@ -22,8 +23,4 @@ live:
 pushlive:
 	cd /tmp && rm -rf muboard
 	cd /tmp && git clone https://github.com/susam/muboard
-	cd /tmp/muboard && npm install
-	cd /tmp/muboard && npm test
-	cd /tmp/muboard && npm run docs
 	cd /tmp/muboard && make site live
-
