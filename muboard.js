@@ -57,16 +57,16 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   }
 
   /**
-   * Read configuration options specified in `window.greenboard` and
-   * configure Greenboard.
+   * Read configuration options specified in `window.muboard` and
+   * configure Muboard.
    */
   function setWindowOptions () {
     let key
     for (key in options) {
       if (typeof window !== 'undefined' &&
-          typeof window.greenboard !== 'undefined' &&
-          typeof window.greenboard[key] !== 'undefined') {
-        options[key] = window.greenboard[key]
+          typeof window.muboard !== 'undefined' &&
+          typeof window.muboard[key] !== 'undefined') {
+        options[key] = window.muboard[key]
       }
     }
   }
@@ -315,7 +315,7 @@ for more details.
    * Show version information.
    */
   function showVersion () {
-    board.innerHTML = 'Greenboard 0.1.0'
+    board.innerHTML = 'Muboard 0.1.0'
   }
 
   /**
