@@ -134,18 +134,15 @@ Features
 Why?
 ----
 
-Muboard was created originally for online analytic number theory book
-club meetings that I host during my evenings. During the meetings, I
-needed a place to type out mathematics formulas and render them
-quickly. I chose to write a tiny non-WSYIWYG tool because I prefer
-such tools. It also helps in keeping the LaTeX snippets in an HTML
-file that can render itself using JavaScript.
+Muboard was created originally for mathematics book club meetings that
+I host frequently. During the meetings, I needed a place to type out
+mathematics formulas and render them quickly. I chose to write a tiny
+non-WSYIWYG tool because I prefer such tools. It also helps in keeping
+the LaTeX snippets in an HTML file that can render itself using
+JavaScript.
 
 The name *Muboard* is a reference to the Möbius function *μ(n)* which
-was the very first topic we discussed using this tool.
-
-By the way, if you are interested in the book club meetings, read more
-about it [here](https://spxy.github.io/bc/).
+was the first function definition we discussed using this tool.
 
 
 Channels
