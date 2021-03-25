@@ -273,10 +273,10 @@ input text field:
   <dd>Clear text input field and the board.</dd>
 
   <dt><code>,i</code></dt>
-  <dd>Insert inline math.</dd>
+  <dd>Insert inline mathematics.</dd>
 
   <dt><code>,d</code></dt>
-  <dd>Insert display math.</dd>
+  <dd>Insert display mathematics.</dd>
 
   <dt><code>,align;</code></dt>
   <dd>Insert align envrionment.</dd>
@@ -303,8 +303,9 @@ field and it will be immediately replaced with LaTeX delimiters for
 inline math.
 </p>
 <p>
-See
-<a href="https://github.com/susam/muboard">github.com/susam/muboard</a>
+Muboard can also be used to create distributable boards with
+Markdown + LaTeX content saved in it. See <a
+href="https://github.com/susam/muboard">github.com/susam/muboard</a>
 for more details.
 </p>
 `
