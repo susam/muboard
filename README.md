@@ -54,7 +54,7 @@ copy and paste the code below into an HTML file with `.html`
 extension:
 
 ```html
-<!DOCTYPE html><script src="https://cdn.jsdelivr.net/npm/muboard@0.1.0"></script><textarea>
+<!DOCTYPE html><script src="https://cdn.jsdelivr.net/npm/muboard@0.2.0"></script><textarea>
 
 # The Möbius function
 
