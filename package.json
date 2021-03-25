@@ -2,6 +2,7 @@
   "name": "muboard",
   "version": "0.1.0",
   "description": "Self-rendering interactive Markdown + LaTeX board",
+  "main": "muboard.js",
   "files": [
     "muboard.js",
     "muboard.min.js",
