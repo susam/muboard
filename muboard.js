@@ -86,7 +86,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         border: thick solid #933; background: #255; color: #eed;
         padding: 1em; height: 60%; resize: both; overflow: auto;
       }
-      :first-child {margin-top: 0}
+      main > :first-child, main > div:first-child > :first-child {margin-top: 0}
       a:link, a:visited {color: #ccf}
       a:hover, a:active {color: #e76}
       hr {border: 0; border-bottom: thin solid #fbc}
