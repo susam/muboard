@@ -202,7 +202,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         render()
         break
       case ',center':
-        replaceCommand(',center', '<div class="center">\n', '\n</div>')
+        replaceCommand(',center', '<div class="center">\n\n', '\n\n</div>')
         render()
         break
       case ',clear':
