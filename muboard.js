@@ -27,6 +27,16 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   'use strict'
 
   /**
+   * Name of this tool.
+   */
+  const name = 'Muboard'
+
+  /**
+   * Version of this tool.
+   */
+  const version = '0.3.0-dev'
+
+  /**
    * Input textarea element is assigned to this variable.
    */
   let input
@@ -57,8 +67,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   }
 
   /**
-   * Read configuration options specified in `window.muboard` and
-   * configure Muboard.
+   * Read configuration options specified via window options and
+   * configure the board.
    */
   function setWindowOptions () {
     let key
@@ -93,6 +103,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       a:hover, a:active {color: #e76}
       hr {border: 0; border-bottom: thin solid #fbc}
       .center {text-align: center}
+      .pane {max-width: 40em; margin: 0 auto}
       textarea {
         background: #111; color: #9c9; margin: auto; margin-top: 1em;
         height: 30%; width: 95%;
@@ -207,10 +218,6 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         replaceCommand(',version', '', '')
         showVersion()
         break
-      case ',license':
-        replaceCommand(',license', '', '')
-        showLicense()
-        break
       default:
         delayedRender()
     }
@@ -240,7 +247,7 @@ Type ,help for help.`
     // Set title if it is not specified explicitly.
     if (typeof window.document.title === 'undefined' ||
         window.document.title === '') {
-      window.document.title = 'Muboard'
+      window.document.title = name
     }
 
     // Display input and output elements.
@@ -265,8 +272,9 @@ Type ,help for help.`
 
   function showHelp () {
     board.innerHTML = `
+<div class="pane">
 <p>
-Muboard supports these commands that may be typed anywhere in the
+${name} supports these commands that may be typed anywhere in the
 input text field:
 </p>
 <dl>
@@ -292,10 +300,7 @@ input text field:
   <dd>Show this help message.</dd>
 
   <dt><code>,version</code></dt>
-  <dd>Show version information.</dd>
-
-  <dt><code>,license</code></dt>
-  <dd>Show license information.</dd>
+  <dd>Show version and license information.</dd>
 </dl>
 <p>
 You can type the above commands anywhere in the input text field to
@@ -304,28 +309,23 @@ field and it will be immediately replaced with LaTeX delimiters for
 inline math.
 </p>
 <p>
-Muboard can also be used to create distributable boards with
-Markdown + LaTeX content saved in it. See <a
+${name} can also be used to create distributable boards with Markdown
++ LaTeX content saved in it. See <a
 href="https://github.com/susam/muboard">github.com/susam/muboard</a>
 for more details.
 </p>
+</div>
 `
   }
 
-  /**
-   * Show version information.
-   */
   function showVersion () {
-    board.innerHTML = 'Muboard 0.1.0'
-  }
-
-  /**
-   * Show license information.
-   */
-  function showLicense () {
     board.innerHTML = `
+<div class="pane">
 <p>
-&copy; 2021 Susam Pal
+${name} ${version}
+</p>
+<p>
+Copyright &copy; 2021 Susam Pal
 </p>          
 <p>
 This is free and open source software. You can use, copy, modify, merge,
@@ -338,6 +338,7 @@ This software is provided <strong>"as is"</strong>, <strong>without
 warranty of any kind</strong>, express or implied. See the MIT License
 for details.
 </p>
+</div>
 `
   }
 
