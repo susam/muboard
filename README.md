@@ -42,7 +42,7 @@ Here is an example screenshot that shows how Muboard with some content
 looks like:
 
 <div align="center">
-<img width="710" src="https://i.imgur.com/UWGwVPV.png">
+<img width="800" src="https://i.imgur.com/G707pkr.png">
 </div>
 
 
