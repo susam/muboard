@@ -89,25 +89,32 @@ body {
   border-box; height: 100%;
 }
 main {
-  background: #255; color: #eed; border: 0.75em ridge #933; padding:
-  1em; box-sizing: border-box; height: 66%; resize: both; overflow:
-  auto;
+  background: #255; color: #eed;
+  border: 0.75em ridge #933; padding: 1em; box-sizing: border-box;
+  width: 100%; height: 66%; resize: both; overflow: auto;
 }
 textarea {
-  background: #111; color: #9c9; margin-top: 0.75rem; border-width:
-  0.125rem; padding: 0.375rem; box-sizing: border-box; height:
-  calc(34% - 0.75em); width: 100%; display: block;
+  background: #111; color: #9c9; display: block; margin-top: 0.75rem;
+  border-width: 0.125rem; padding: 0.375rem; box-sizing: border-box;
+  width: 100%; height: calc(34% - 0.75em);
 }
 pre, code, samp, kbd {color: #dec; font-family: monospace, monospace}
 h1 {font-size: 1.5em}
 h2 {font-size: 1.25em}
 h1, h2, h3, h4, h5, h6 {margin: 1em 0 0.5em 0; line-height: 1.2}
 main > :first-child, main > :first-child > :first-child {margin-top: 0}
+section > :first-child, section > :first-child > :first-child {margin-top: 0}
 a:link, a:visited {color: #ccf}
 a:hover, a:active {color: #e76}
 hr {border: 0; border-bottom: thin solid #fbc}
 .center {text-align: center}
 article {max-width: 40em; margin: 0 auto}
+main > section {display: flex}
+main > section > section {
+  display: block; flex-basis: 100%; padding: 0.5em;
+}
+main > section > section:first-child {padding-left: 0}
+main > section > section:last-child {padding-right}
 `
 
   /**
@@ -208,6 +215,16 @@ article {max-width: 40em; margin: 0 auto}
         replaceCommand(',article', '<article>\n\n', '\n\n</article>')
         render()
         break
+      case ',split':
+        replaceCommand(',split', '<section>\n<section>\n\n',
+                       '\n\n</section>\n<section>\n\n' +
+                       '\n\n</section>\n</section>')
+        render()
+        break
+      case ',section':
+        replaceCommand(',section', '<section>\n\n', '\n\n</section>')
+        render()
+        break
       case ',center':
         replaceCommand(',center', '<div class="center">\n\n', '\n\n</div>')
         render()
@@ -280,10 +297,16 @@ Type ,help for help.`
   function showHelp () {
     board.innerHTML = `
 <article>
-<h1>${name} Help</h1>
+<h1>${name}</h1>
 <p>
-${name} supports the following commands that may be typed anywhere in
-the input text field:
+Muboard is a web-based mathematics display board. Muboard lets you
+scribble mathematics using LaTeX and Markdown while presenting your
+desktop screen.
+</p>
+<h2>Commands</h2>
+<p>
+The following commands that may be typed anywhere in the input text
+field:
 </p>
 <dl>
   <dt><code>,clear</code></dt>
@@ -300,6 +323,17 @@ the input text field:
 
   <dt><code>,align*</code></dt>
   <dd>Insert align* environment.</dd>
+
+  <dt><code>,split</code></dt>
+  <dd>
+    Split the board into two side-by-side columnar sections. More
+    columnar sections may be added with the next command.
+  </dd>
+
+  <dt><code>,section</code></dt>
+  <dd>
+    Insert section element.
+  </dd>
 
   <dt><code>,article</code></dt>
   <dd>
@@ -330,6 +364,17 @@ ${name} can also be used to create distributable boards with Markdown
 href="https://github.com/susam/muboard">github.com/susam/muboard</a>
 for more details.
 </p>
+<hr style="margin: 1em 0">
+<div style="font-size: small; text-align: center">
+<p>
+${name} is created and maintained by <a
+href="https://twitter.com/intent/follow?screen_name=susam">Susam</a>.
+</p>
+<p>
+The source code is available on
+<a href="https://github.com/susam/muboard">GitHub</a>.
+</p>
+</div>
 </article>
 `
   }
