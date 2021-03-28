@@ -24,3 +24,11 @@ pushlive:
 	cd /tmp && rm -rf muboard
 	cd /tmp && git clone https://github.com/susam/muboard
 	cd /tmp/muboard && make site live
+
+pushfix:
+	cd /tmp && rm -rf muboard
+	SRC_DIR="$$PWD"; cd /tmp && git clone "$$SRC_DIR"
+	cd /tmp/muboard && git checkout fix
+	cd /tmp/muboard && git remote remove origin
+	cd /tmp/muboard && git remote add origin https://github.com/susam/muboard.git
+	cd /tmp/muboard && make site live
