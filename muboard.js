@@ -34,7 +34,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   /**
    * Version of this tool.
    */
-  const version = '0.4.0-dev'
+  const version = '0.4.0-dev3'
 
   /**
    * Input textarea element is assigned to this variable.
@@ -168,6 +168,7 @@ main > section > section:last-child {padding-right}
     input.value = s.substr(0, textPos) + text1 + text2 +
                   s.substr(cursorPos)
     input.setSelectionRange(movePos, movePos)
+    clearTimer()
   }
 
   /**
