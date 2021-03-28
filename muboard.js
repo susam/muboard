@@ -234,6 +234,26 @@ main > section > section:last-child {padding-right}
         replaceCommand(',center', '<div class="center">\n\n', '\n\n</div>')
         render()
         break
+      case ',save':
+        replaceCommand(',save', '', '')
+        render()
+        setTimeout(saveLocal, 10)
+        break
+      case ',load':
+        replaceCommand(',load', '', '')
+        render()
+        setTimeout(loadLocal, 10)
+        break
+      case ',remove':
+        replaceCommand(',remove', '', '')
+        render()
+        setTimeout(removeLocal, 10)
+        break
+      case ',list':
+        replaceCommand(',list', '', '')
+        render()
+        listLocal()
+        break
       case ',help':
         replaceCommand(',help', '', '')
         showHelp()
@@ -294,6 +314,108 @@ Type ,help for help.`
     input.addEventListener('input', handleKey)
   }
 
+  /**
+   * Save input to local storage.
+   */
+  function saveLocal () {
+    const msg = 'Provide a key name to save the current input to the ' +
+                'browser\'s local storage.\n\n' +
+                'You can use the same key to load the input later.'
+    const key = window.prompt(msg)
+    if (key === null) {
+      return
+    } else if (key === '') {
+      board.innerHTML = `<article>
+<h1>Error</h1>
+<p>Key cannot be empty string.</p>
+</article>`
+      return
+    } else if (/\s/.test(key)) {
+      board.innerHTML = `<article>
+<h1>Error</h1>
+<p>Key cannot have whitespace.</p>
+</article>`
+      return
+    }
+    if (window.localStorage.getItem(key) !== null) {
+      const msg = 'A key with the given name already exists.\n\n' +
+                  'Do you want to overwrite the same key?'
+      const answer = window.confirm(msg)
+      if (answer === false) {
+        return
+      }
+    }
+    localStorage.setItem(key, input.value)
+  }
+
+  /**
+   * Load input from local storage.
+   */
+  function loadLocal() {
+    const msg = 'Provide a key name to load input from the browser\'s ' +
+                'local storage.'
+    const key = window.prompt(msg)
+    const value = window.localStorage.getItem(key)
+    if (value !== null) {
+      input.value = value
+      render()
+    } else {
+      board.innerHTML = `<article>
+<h1>Error</h1>
+<p>Key does not exist.</p>
+</article>`
+    }
+  }
+
+  /**
+   * Remove an input saved in local storage.
+   */
+  function removeLocal() {
+    const msg = 'Provide name of key to remove from browser\'s ' +
+                'local storage.'
+    const key = window.prompt(msg)
+    const value = window.localStorage.getItem(key)
+    if (value !== null) {
+      window.localStorage.removeItem(key)
+    } else {
+      board.innerHTML = `<article>
+<h1>Error</h1>
+<p>Key does not exist.</p>
+</article>`
+    }
+  }
+
+  /**
+   * List inputs saved in local storage.
+   */
+  function listLocal() {
+    if (localStorage.length === 0) {
+      board.innerHTML = '<article><h1>No Keys Found</h1></article>'
+      return
+    }
+
+    let out = `<article>
+<h1>Saved Keys</h1>
+<p>
+The following Muboard keys are saved in the local storage of your
+browser:
+</p>
+<ol>`
+
+    for (let i = 0; i < localStorage.length; i++) {
+      out += '<li>' + localStorage.key(i) + '</li>'
+    }
+    out += `</ol>
+<p>
+Type <code>,load</code> to load any key.
+</p>
+</article>`
+    board.innerHTML = out
+  }
+
+  /**
+   * Show help message on board.
+   */
   function showHelp () {
     board.innerHTML = `
 <article>
@@ -343,6 +465,26 @@ field:
     Insert section element.
   </dd>
 
+  <dt><code>,save</code></dt>
+  <dd>
+    Save current input to the browser's local storage.
+  </dd>
+
+  <dt><code>,load</code></dt>
+  <dd>
+    Load an input from the browser's local storage.
+  </dd>
+
+  <dt><code>,remove</code></dt>
+  <dd>
+    Remove an input from the browser's local storage.
+  </dd>
+
+  <dt><code>,list</code></dt>
+  <dd>
+    List all inputs saved in the browser's local storage.
+  </dd>
+
   <dt><code>,center</code></dt>
   <dd>Insert center-aligned text.</dd>
 
@@ -385,7 +527,7 @@ The source code is available on
 <h1>${name} ${version}</h1>
 <p>
 Copyright &copy; 2021 Susam Pal
-</p>          
+</p>
 <p>
 This is free and open source software. You can use, copy, modify,
 merge, publish, distribute, sublicense, and/or sell copies of it,
