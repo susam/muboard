@@ -34,7 +34,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   /**
    * Version of this tool.
    */
-  const version = '0.3.0-dev'
+  const version = '0.4.0-dev'
 
   /**
    * Input textarea element is assigned to this variable.
@@ -258,6 +258,10 @@ main > section > section:last-child {padding-right}
         replaceCommand(',help', '', '')
         showHelp()
         break
+      case ',example':
+        replaceCommand(',example', '', '')
+        showExample()
+        break
       case ',version':
         replaceCommand(',version', '', '')
         showVersion()
@@ -277,7 +281,9 @@ main > section > section:last-child {padding-right}
     input = window.document.createElement('textarea')
     input.placeholder = `Write content in LaTeX + Markdown format here.
 
-Type ,help for help.`
+Type ,help for help.
+
+Type ,example for demo.`
 
     // Read initial input.
     if (textareaElements.length > 0) {
@@ -492,6 +498,9 @@ field:
   <dt><code>,help</code></dt>
   <dd>Show this help message.</dd>
 
+  <dt><code>,demo</code></dt>
+  <dd>Show demo content on board.</dd>
+
   <dt><code>,version</code></dt>
   <dd>Show version and license information.</dd>
 </dl>
@@ -520,6 +529,42 @@ The source code is available on
 </div>
 </article>
 `
+  }
+
+  /**
+   * Show demo content on board.
+   */
+  function showExample () {
+    input.value = `
+<article>
+
+# The Möbius function
+
+For any positive integer $ n $, the Möbius function $ \\mu(n) $ is
+defined as follows:
+
+$$ \\mu(1) = 1; $$
+
+If $ n > 1, $ write $ n = p_1^{a_1} \\dots p_2^{a_k} $ (prime
+factorization). Then
+
+\\begin{align*}
+  \\mu(n) & = (-1)^k \\text{ if } a_1 = a_2 = \dots = a_k = 1, \\\\
+  \\mu(n) & = 0 \\text{ otherwise}.
+\\end{align*}
+
+If $ n \\ge 1, $ we have
+
+$$
+  \\sum_{d \\mid n} \\mu(d) =
+  \\begin{cases}
+    1 & \\text{ if } n = 1, \\\\
+    0 & \\text{ if } n > 1.
+  \\end{cases}
+$$
+
+</article>`
+    render()
   }
 
   function showVersion () {

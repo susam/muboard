@@ -1,6 +1,15 @@
 Changelog
 =========
 
+0.4.0 (UNRELEASED)
+------------------
+
+### Added
+
+- Editing commands:
+  - `,example`: Show demo content on board.
+
+
 0.3.0 (2021-03-28)
 ------------------
 
