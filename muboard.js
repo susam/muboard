@@ -99,14 +99,15 @@ textarea {
   calc(34% - 0.75em); width: 100%; display: block;
 }
 pre, code, samp, kbd {color: #dec; font-family: monospace, monospace}
-main > :first-child, main > div:first-child > :first-child {margin-top: 0}
 h1 {font-size: 1.5em}
 h2 {font-size: 1.25em}
+h1, h2, h3, h4, h5, h6 {margin: 1em 0 0.5em 0; line-height: 1.2}
+main > :first-child, main > :first-child > :first-child {margin-top: 0}
 a:link, a:visited {color: #ccf}
 a:hover, a:active {color: #e76}
 hr {border: 0; border-bottom: thin solid #fbc}
 .center {text-align: center}
-.pane {max-width: 40em; margin: 0 auto}
+article {max-width: 40em; margin: 0 auto}
 `
 
   /**
@@ -203,6 +204,10 @@ hr {border: 0; border-bottom: thin solid #fbc}
         replaceCommand(',align*', '\\begin{align*}\n', '\n\\end{align*}')
         render()
         break
+      case ',article':
+        replaceCommand(',article', '<article>\n\n', '\n\n</article>')
+        render()
+        break
       case ',center':
         replaceCommand(',center', '<div class="center">\n\n', '\n\n</div>')
         render()
@@ -274,7 +279,8 @@ Type ,help for help.`
 
   function showHelp () {
     board.innerHTML = `
-<div class="pane">
+<article>
+<h1>${name} Help</h1>
 <p>
 ${name} supports the following commands that may be typed anywhere in
 the input text field:
@@ -294,6 +300,14 @@ the input text field:
 
   <dt><code>,align*</code></dt>
   <dd>Insert align* environment.</dd>
+
+  <dt><code>,article</code></dt>
+  <dd>
+    Insert article element. The article element is displayed as a
+    single column of text at the center of the board with a fixed
+    maximum width that makes the text easier to read. Recommended for
+    distributable boards.
+  </dd>
 
   <dt><code>,center</code></dt>
   <dd>Insert center-aligned text.</dd>
@@ -316,31 +330,30 @@ ${name} can also be used to create distributable boards with Markdown
 href="https://github.com/susam/muboard">github.com/susam/muboard</a>
 for more details.
 </p>
-</div>
+</article>
 `
   }
 
   function showVersion () {
     board.innerHTML = `
-<div class="pane">
-<p>
-${name} ${version}
-</p>
+<article>
+<h1>${name} ${version}</h1>
 <p>
 Copyright &copy; 2021 Susam Pal
 </p>          
 <p>
-This is free and open source software. You can use, copy, modify, merge,
-publish, distribute, sublicense, and/or sell copies of it, under the
-terms of the MIT License. You can obtain a copy of the MIT License at
-<a href="https://susam.github.io/licenses/mit.html">susam.github.io/licenses/mit.html</a>.
+This is free and open source software. You can use, copy, modify,
+merge, publish, distribute, sublicense, and/or sell copies of it,
+under the terms of the <a
+href="https://github.com/susam/muboard/blob/master/LICENSE.md">MIT
+License</a>.
 </p>
 <p>
-This software is provided <strong>"as is"</strong>, <strong>without
-warranty of any kind</strong>, express or implied. See the MIT License
+This software is provided <em>"as is"</em>, <em>without
+warranty of any kind</em>, express or implied. See the MIT License
 for details.
 </p>
-</div>
+</article>
 `
   }
 
