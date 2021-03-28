@@ -195,6 +195,11 @@ main > section > section:last-child {padding-right}
     // command.
     const possibleCommand = behind.substr(lastComma)
     switch (possibleCommand) {
+      case ',clear':
+        clearTimer()
+        board.innerHTML = input.value = ''
+        render()
+        break
       case ',i':
         replaceCommand(',i', '$ ', ' $')
         render()
@@ -227,11 +232,6 @@ main > section > section:last-child {padding-right}
         break
       case ',center':
         replaceCommand(',center', '<div class="center">\n\n', '\n\n</div>')
-        render()
-        break
-      case ',clear':
-        clearTimer()
-        board.innerHTML = input.value = ''
         render()
         break
       case ',help':
@@ -324,6 +324,14 @@ field:
   <dt><code>,align*</code></dt>
   <dd>Insert align* environment.</dd>
 
+  <dt><code>,article</code></dt>
+  <dd>
+    Insert article element. The article element is displayed as a
+    single column of text at the center of the board with a fixed
+    maximum width that makes the text easier to read. Recommended for
+    distributable boards.
+  </dd>
+
   <dt><code>,split</code></dt>
   <dd>
     Split the board into two side-by-side columnar sections. More
@@ -333,14 +341,6 @@ field:
   <dt><code>,section</code></dt>
   <dd>
     Insert section element.
-  </dd>
-
-  <dt><code>,article</code></dt>
-  <dd>
-    Insert article element. The article element is displayed as a
-    single column of text at the center of the board with a fixed
-    maximum width that makes the text easier to read. Recommended for
-    distributable boards.
   </dd>
 
   <dt><code>,center</code></dt>
