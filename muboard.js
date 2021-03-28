@@ -550,7 +550,7 @@ If $ n > 1, $ write $ n = p_1^{a_1} \\dots p_2^{a_k} $ (prime
 factorization). Then
 
 \\begin{align*}
-  \\mu(n) & = (-1)^k \\text{ if } a_1 = a_2 = \dots = a_k = 1, \\\\
+  \\mu(n) & = (-1)^k \\text{ if } a_1 = a_2 = \\dots = a_k = 1, \\\\
   \\mu(n) & = 0 \\text{ otherwise}.
 \\end{align*}
 
