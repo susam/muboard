@@ -81,41 +81,43 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     }
   }
 
+  const greenStyle = `
+html {height: 100%}
+body {
+  background: #eec; font-family: helvetica, arial, sans-serif;
+  line-height: 1.5; margin: 0; padding: 0.75em; box-sizing:
+  border-box; height: 100%;
+}
+main {
+  background: #255; color: #eed; border: 0.75em ridge #933; padding:
+  1em; box-sizing: border-box; height: 66%; resize: both; overflow:
+  auto;
+}
+textarea {
+  background: #111; color: #9c9; margin-top: 0.75rem; border-width:
+  0.125rem; padding: 0.375rem; box-sizing: border-box; height:
+  calc(34% - 0.75em); width: 100%; display: block;
+}
+pre, code, samp, kbd {color: #dec; font-family: monospace, monospace}
+main > :first-child, main > div:first-child > :first-child {margin-top: 0}
+h1 {font-size: 1.5em}
+h2 {font-size: 1.25em}
+a:link, a:visited {color: #ccf}
+a:hover, a:active {color: #e76}
+hr {border: 0; border-bottom: thin solid #fbc}
+.center {text-align: center}
+.pane {max-width: 40em; margin: 0 auto}
+`
+
   /**
    * A map of available CSS styles.
    */
-  const styles = {
-    green: `
-      html {height: 100%}
-      body {
-        background: #eec; font-family: helvetica, arial, sans-serif;
-        line-height: 1.5; margin: 0; padding: 0.5em;
-        height: 100%; display: flex; flex-direction: column;
-      }
-      main {
-        border: thick solid #933; background: #255; color: #eed;
-        padding: 1em; height: 60%; resize: both; overflow: auto;
-      }
-      main > :first-child, main > div:first-child > :first-child {margin-top: 0}
-      h1 {font-size: 1.5em}
-      h2 {font-size: 1.25em}
-      a:link, a:visited {color: #ccf}
-      a:hover, a:active {color: #e76}
-      hr {border: 0; border-bottom: thin solid #fbc}
-      .center {text-align: center}
-      .pane {max-width: 40em; margin: 0 auto}
-      textarea {
-        background: #111; color: #9c9; margin: auto; margin-top: 1em;
-        height: 30%; width: 95%;
-      }
-`
-  }
+  const styles = {green: greenStyle}
 
   /**
    * Render input to output board immediately.
    */
   function render () {
-    console.log('render() ...')
     board.innerHTML = window.texme.render(input.value)
     window.MathJax.texReset(0)
     window.MathJax.typeset()
@@ -274,8 +276,8 @@ Type ,help for help.`
     board.innerHTML = `
 <div class="pane">
 <p>
-${name} supports these commands that may be typed anywhere in the
-input text field:
+${name} supports the following commands that may be typed anywhere in
+the input text field:
 </p>
 <dl>
   <dt><code>,clear</code></dt>
