@@ -120,7 +120,7 @@ main > section > section:last-child {padding-right}
   /**
    * A map of available CSS styles.
    */
-  const styles = {green: greenStyle}
+  const styles = { green: greenStyle }
 
   /**
    * Render input to output board immediately.
@@ -222,8 +222,8 @@ main > section > section:last-child {padding-right}
         break
       case ',split':
         replaceCommand(',split', '<section>\n<section>\n\n',
-                       '\n\n</section>\n<section>\n\n' +
-                       '\n\n</section>\n</section>')
+          '\n\n</section>\n<section>\n\n' +
+          '\n\n</section>\n</section>')
         render()
         break
       case ',section':
@@ -346,13 +346,13 @@ Type ,help for help.`
         return
       }
     }
-    localStorage.setItem(key, input.value)
+    window.localStorage.setItem(key, input.value)
   }
 
   /**
    * Load input from local storage.
    */
-  function loadLocal() {
+  function loadLocal () {
     const msg = 'Provide a key name to load input from the browser\'s ' +
                 'local storage.'
     const key = window.prompt(msg)
@@ -371,7 +371,7 @@ Type ,help for help.`
   /**
    * Remove an input saved in local storage.
    */
-  function removeLocal() {
+  function removeLocal () {
     const msg = 'Provide name of key to remove from browser\'s ' +
                 'local storage.'
     const key = window.prompt(msg)
@@ -389,8 +389,8 @@ Type ,help for help.`
   /**
    * List inputs saved in local storage.
    */
-  function listLocal() {
-    if (localStorage.length === 0) {
+  function listLocal () {
+    if (window.localStorage.length === 0) {
       board.innerHTML = '<article><h1>No Keys Found</h1></article>'
       return
     }
@@ -403,8 +403,8 @@ browser:
 </p>
 <ol>`
 
-    for (let i = 0; i < localStorage.length; i++) {
-      out += '<li>' + localStorage.key(i) + '</li>'
+    for (let i = 0; i < window.localStorage.length; i++) {
+      out += '<li>' + window.localStorage.key(i) + '</li>'
     }
     out += `</ol>
 <p>
