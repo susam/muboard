@@ -297,6 +297,7 @@ Type ,help for help.`
     // Display input and output elements.
     window.document.body.appendChild(board)
     window.document.body.appendChild(input)
+    input.focus()
 
     // Set stylesheet.
     const styleElement = window.document.createElement('style')
