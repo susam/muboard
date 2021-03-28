@@ -111,7 +111,7 @@ hr {border: 0; border-bottom: thin solid #fbc}
 article {max-width: 40em; margin: 0 auto}
 main > section {display: flex}
 main > section > section {
-  display: block; flex-basis: 100%; padding: 0.5em;
+  display: block; flex-basis: 100%; padding: 0 0.5em;
 }
 main > section > section:first-child {padding-left: 0}
 main > section > section:last-child {padding-right}
