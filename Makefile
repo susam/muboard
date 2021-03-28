@@ -3,7 +3,7 @@ site:
 	mkdir -p _site/examples
 	cp -R web/* _site/
 	for f in examples/*.html; do \
-	    sed 's|../muboard.js|https://cdn.jsdelivr.net/npm/muboard@0.2.0|' "$$f" > \
+	    sed 's|../muboard.js|https://cdn.jsdelivr.net/npm/muboard@0.3.0|' "$$f" > \
 	        _site/examples/"$$(basename "$$f")"; done
 	cp muboard.html muboard.js muboard.min.js _site/
 	cp muboard.html _site/index.html

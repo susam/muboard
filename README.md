@@ -54,7 +54,7 @@ copy and paste the code below into an HTML file with `.html`
 extension:
 
 ```html
-<!DOCTYPE html><script src="https://cdn.jsdelivr.net/npm/muboard@0.2.0"></script><textarea>
+<!DOCTYPE html><script src="https://cdn.jsdelivr.net/npm/muboard@0.3.0"></script><textarea>
 
 # The Möbius function
 
@@ -95,55 +95,60 @@ brevity comes at the cost of standard conformance. For example, the
 required `<title>` element is missing from the code. Further the
 `<textarea>` element is not closed. Despite the missing tags, this
 example works just fine because all web browsers follow the
-[robustness principle][ROBUSTNESS].
+[robustness principle][robustness].
 
 For the sake of completeness and correctness, here is a minimal but
 complete and valid HTML example:
 [valid-html5.html](https://muboard.net/examples/valid-html5.html)
 ([source](examples/valid-html5.html)). It has a few more lines of code
 to ensure that this HTML5 code validates successfully at
-[validator.w3.org][VALIDATOR]. In case you are wondering, a valid
+[validator.w3.org][validator]. In case you are wondering, a valid
 HTML5 document does not require explicit `<head>`, `<body>`, or the
 closing `</html>` tags, so they have been omitted for the sake of
 brevity while maintaining completeness and correctness in this
 example.
 
-[ROBUSTNESS]: https://en.wikipedia.org/wiki/Robustness_principle
-[VALIDATOR]: https://validator.w3.org/#validate_by_input
+[robustness]: https://en.wikipedia.org/wiki/Robustness_principle
+[validator]: https://validator.w3.org/#validate_by_input
 
 
 Features
 --------
 
 * Runs in a web browser.
-* Supports Markdown (CommonMark).
+* Keyboard driven user interface.
+* Vertical splits.
+* Input is just LaTeX, Markdown, and HTML. Avoids any new syntax.
+* Conforms to CommonMark specification of Markdown.
 * Supports a [subset of LaTeX][macros] using MathJax.
 * Supports creating self-rendering distributable boards with a single
   line of HTML.
-* Supports editing macros such as `,i`, `,d`, `,align*`, etc. to
+* Supports editing commands such as `,i`, `,d`, `,align*`, etc. to
   automatically insert LaTeX delimiters for inline mathematics,
   display mathematics, align environment, etc. (Type `,help` in the
   board input to see a complete list of supported commands.)
-* Not a [WYSIWYG][WYSIWYG] tool.
+* Support for saving/loading snippets to/from browser's local storage.
+* Not a [WYSIWYG][wysiwyg] tool.
 * Not a collaborative editing tool.
 
 [macros]: http://docs.mathjax.org/en/latest/input/tex/macros/index.html
-[WYSIWYG]: https://en.wikipedia.org/wiki/WYSIWYG
+[wysiwyg]: https://en.wikipedia.org/wiki/WYSIWYG
 
 
 Why?
 ----
 
-Muboard was created originally for mathematics book club meetings that
-I host frequently. During the meetings, I needed a place to type out
-mathematics formulas and render them quickly. I chose to write a tiny
-non-WSYIWYG tool because I prefer such tools. It also helps in keeping
-the LaTeX snippets in an HTML file that can render itself using
-JavaScript.
+Muboard was created originally for [mathematics book club
+meetings][meet] that I host frequently. During the meetings, I needed
+a place to type out mathematics formulas and render them quickly. I
+chose to write a tiny non-WSYIWYG tool because I prefer such tools. It
+also helps in keeping the LaTeX snippets in an HTML file that can
+render itself using JavaScript.
 
 The name *Muboard* is a reference to the Möbius function *μ(n)* which
 was the first function definition we discussed using this tool.
 
+[meet]: https://antmeet.github.io/
 
 Channels
 --------
@@ -180,6 +185,6 @@ Support
 -------
 
 To report bugs, suggest improvements, or ask questions,
-[create issues][ISSUES].
+[create issues][issues].
 
-[ISSUES]: https://github.com/susam/muboard/issues
+[issues]: https://github.com/susam/muboard/issues

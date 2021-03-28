@@ -10,7 +10,7 @@ Perform the following tasks for every release:
   - Update version in package.json.
   - Update version in Makefile.
   - Update copyright notice in LICENSE.md.
-  - Update copyright notice in texme.js.
+  - Update copyright notice in muboard.js.
   - Update CHANGES.md.
   - Run tests.
 
