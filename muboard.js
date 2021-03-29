@@ -499,8 +499,8 @@ field:
   <dt><code>,help</code></dt>
   <dd>Show this help message.</dd>
 
-  <dt><code>,demo</code></dt>
-  <dd>Show demo content on board.</dd>
+  <dt><code>,example</code></dt>
+  <dd>Show demo example content on board.</dd>
 
   <dt><code>,version</code></dt>
   <dd>Show version and license information.</dd>
