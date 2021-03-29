@@ -536,8 +536,7 @@ The source code is available on
    * Show demo content on board.
    */
   function showExample () {
-    input.value = `
-<article>
+    input.value = `<article>
 
 # The Möbius function
 
