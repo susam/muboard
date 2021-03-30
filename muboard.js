@@ -114,7 +114,7 @@ main > section > section {
   display: block; flex-basis: 100%; padding: 0 0.5em;
 }
 main > section > section:first-child {padding-left: 0}
-main > section > section:last-child {padding-right}
+main > section > section:last-child {padding-right: 0}
 `
 
   /**
