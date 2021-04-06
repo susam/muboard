@@ -6,16 +6,16 @@ Changelog
 
 ### Added
 
-- Add command `,example` to show demo content on board.
 - Optional footer with project links.
 - Add option `footer` to control whether to display footer.
+- Add command `,example` to show demo content on board.
+- Add command `,footer` to toggle the display of footer.
 
 
 0.3.0 (2021-03-28)
 ------------------
 
 ### Added
-
 
 - Add command `,article` to write an article with a fixed maximum
   width layout.

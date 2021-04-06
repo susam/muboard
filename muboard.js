@@ -47,6 +47,11 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   let board
 
   /**
+   * HTML element to display an optional footer.
+   */
+  let footer
+
+  /**
    * Timeout ID of timeout that triggers delayed rendering of input to
    * board.
    */
@@ -261,6 +266,11 @@ footer a:hover, a:active {color: #06f}
         render()
         listLocal()
         break
+      case ',footer':
+        replaceCommand(',footer', '', '')
+        render()
+        toggleFooter()
+        break
       case ',help':
         replaceCommand(',help', '', '')
         showHelp()
@@ -292,7 +302,7 @@ Type ,help for help.
 
 Type ,example for demo.`
 
-    const footer = window.document.createElement('footer')
+    footer = window.document.createElement('footer')
     footer.innerHTML = `<footer">
 <a href="https://github.com/susam/muboard">GitHub</a>
 <a href="https://twitter.com/intent/follow?screen_name=susam">Twitter</a>
@@ -373,6 +383,14 @@ Type ,example for demo.`
       }
     }
     window.localStorage.setItem(key, input.value)
+  }
+
+  /**
+   * Toggle the display of footer.
+   */
+  function toggleFooter () {
+    let display = footer.style.display
+    footer.style.display = display === 'none' ? 'block' : 'none'
   }
 
   /**
@@ -488,32 +506,25 @@ field:
   </dd>
 
   <dt><code>,section</code></dt>
-  <dd>
-    Insert section element.
-  </dd>
-
-  <dt><code>,save</code></dt>
-  <dd>
-    Save current input to the browser's local storage.
-  </dd>
-
-  <dt><code>,load</code></dt>
-  <dd>
-    Load an input from the browser's local storage.
-  </dd>
-
-  <dt><code>,remove</code></dt>
-  <dd>
-    Remove an input from the browser's local storage.
-  </dd>
-
-  <dt><code>,list</code></dt>
-  <dd>
-    List all inputs saved in the browser's local storage.
-  </dd>
+  <dd>Insert section element.</dd>
 
   <dt><code>,center</code></dt>
   <dd>Insert center-aligned text.</dd>
+
+  <dt><code>,save</code></dt>
+  <dd>Save current input to the browser's local storage.</dd>
+
+  <dt><code>,load</code></dt>
+  <dd>Load an input from the browser's local storage.</dd>
+
+  <dt><code>,remove</code></dt>
+  <dd>Remove an input from the browser's local storage.</dd>
+
+  <dt><code>,list</code></dt>
+  <dd>List all inputs saved in the browser's local storage.</dd>
+
+  <dt><code>,footer</code></dt>
+  <dd>Toggle the display of footer at the bottom of the page.</dd>
 
   <dt><code>,help</code></dt>
   <dd>Show this help message.</dd>
