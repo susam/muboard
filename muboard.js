@@ -64,6 +64,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   function setDefaultOptions () {
     options.texmeURL = 'https://cdn.jsdelivr.net/npm/texme@0.9.0'
     options.renderDelay = 200
+    options.footer = false
   }
 
   /**
@@ -115,6 +116,11 @@ main > section > section {
 }
 main > section > section:first-child {padding-left: 0}
 main > section > section:last-child {padding-right: 0}
+footer {margin: 1em 0; text-align: center; display: none}
+footer a {margin-right: 1em}
+footer a:last-child {margin-right: 0}
+footer a:link, footer a:visited {color: #03c}
+footer a:hover, a:active {color: #06f}
 `
 
   /**
@@ -286,6 +292,13 @@ Type ,help for help.
 
 Type ,example for demo.`
 
+    const footer = window.document.createElement('footer')
+    footer.innerHTML = `<footer">
+<a href="https://github.com/susam/muboard">GitHub</a>
+<a href="https://twitter.com/intent/follow?screen_name=susam">Twitter</a>
+<a href="https://github.com/susam/muboard/blob/master/LICENSE.md">License</a>
+</footer>`
+
     // Read initial input.
     if (textareaElements.length > 0) {
       input.value = textareaElements[0].value.trim()
@@ -304,6 +317,7 @@ Type ,example for demo.`
     // Display input and output elements.
     window.document.body.appendChild(board)
     window.document.body.appendChild(input)
+    window.document.body.appendChild(footer)
     input.focus()
 
     // Set stylesheet.
@@ -317,6 +331,11 @@ Type ,example for demo.`
     metaElement.name = 'viewport'
     metaElement.content = 'width=device-width, initial-scale=1.0'
     window.document.head.appendChild(metaElement)
+
+    // Display footer if enabled in configuration.
+    if (options.footer) {
+      footer.style.display = 'block'
+    }
 
     render()
     input.addEventListener('input', handleKey)

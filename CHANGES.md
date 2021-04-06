@@ -6,8 +6,9 @@ Changelog
 
 ### Added
 
-- Editing commands:
-  - `,example`: Show demo content on board.
+- Add command `,example` to show demo content on board.
+- Optional footer with project links.
+- Add option `footer` to control whether to display footer.
 
 
 0.3.0 (2021-03-28)
