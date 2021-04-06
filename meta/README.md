@@ -40,7 +40,7 @@ Perform the following tasks for every release:
 
   - Publish documentation and examples.
 
-        make pushlive
+        make live
 
 
 Post-Release Checklist

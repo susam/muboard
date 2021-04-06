@@ -8,27 +8,18 @@ site:
 	cp muboard.html muboard.js muboard.min.js _site/
 	cp muboard.html _site/index.html
 
-live:
-	git branch -D live || true
-	git switch -f --orphan live
-	rm -rf node_modules package-lock.json
-	mv _site/* .
+pushlive:
+	git init
 	git config user.name "live"
 	git config user.email "live@localhost"
+	git remote add origin https://github.com/susam/muboard.git
+	git checkout -b live
 	git add .
 	git commit -m "Publish live ($$(date -u +"%Y-%m-%d %H:%M:%S"))"
 	git log
 	git push -f origin live
 
-pushlive:
-	cd /tmp && rm -rf muboard
-	cd /tmp && git clone https://github.com/susam/muboard
-	cd /tmp/muboard && make site live
-
-pushfix:
-	cd /tmp && rm -rf muboard
-	SRC_DIR="$$PWD"; cd /tmp && git clone "$$SRC_DIR"
-	cd /tmp/muboard && git checkout fix
-	cd /tmp/muboard && git remote remove origin
-	cd /tmp/muboard && git remote add origin https://github.com/susam/muboard.git
-	cd /tmp/muboard && make site live
+live: site
+	rm -rf /tmp/live
+	mv _site /tmp/live
+	REPO_DIR="$$PWD"; cd /tmp/live && make -f "$$REPO_DIR/Makefile" pushlive
