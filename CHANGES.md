@@ -16,14 +16,19 @@ Changelog
 
 ### Added
 
-- Editing commands:
-  - `,article`: Write an article with a fixed maximum width layout.
-  - `,split`: Split the board vertically into two columns.
-  - `,section`: Insert section element.
-  - `,save`: Save current input to the browser's local storage.
-  - `,load`: Load an input from the browser's local storage.
-  - `,remove`: Remove an input from the browser's local storage.
-  - `,list`: List all inputs saved in the browser's local storage.
+
+- Add command `,article` to write an article with a fixed maximum
+  width layout.
+- Add command `,split` to split the board vertically into two columns.
+- Add command `,section` to insert section element.
+- Add command `,save` to save current input to the browser's local
+  storage.
+- Add command `,load` to load an input from the browser's local
+  storage.
+- Add command `,remove` to remove an input from the browser's local
+  storage.
+- Add command `,list` to list inputs saved in the browser's local
+  storage.
 
 
 ### Changed
