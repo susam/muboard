@@ -19,6 +19,8 @@ desktop screen to others during real-world or virtual meetings.
 [Twitter SVG]: https://img.shields.io/badge/twitter-%40susam-%231da1f2
 [Twitter URL]: https://twitter.com/intent/follow?screen_name=susam
 
+<!-- Muboard 0.4.0 -->
+
 
 Contents
 --------
@@ -54,7 +56,7 @@ copy and paste the code below into an HTML file with `.html`
 extension:
 
 ```html
-<!DOCTYPE html><script src="https://cdn.jsdelivr.net/npm/muboard@0.3.0"></script><textarea>
+<!DOCTYPE html><script src="https://cdn.jsdelivr.net/npm/muboard@0.4.0"></script><textarea>
 
 # The Möbius function
 

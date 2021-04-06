@@ -6,6 +6,7 @@ Release Checklist
 
 Perform the following tasks for every release:
 
+  - Update version in muboard.js.
   - Update version in README.md.
   - Update version in package.json.
   - Update version in Makefile.

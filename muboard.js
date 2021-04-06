@@ -34,7 +34,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   /**
    * Version of this tool.
    */
-  const version = '0.4.0-dev3'
+  const version = '0.4.0'
 
   /**
    * Input textarea element is assigned to this variable.
@@ -389,7 +389,7 @@ Type ,example for demo.`
    * Toggle the display of footer.
    */
   function toggleFooter () {
-    let display = footer.style.display
+    const display = footer.style.display
     footer.style.display = display === 'none' ? 'block' : 'none'
   }
 
