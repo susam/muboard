@@ -9,9 +9,10 @@ site:
 	cp muboard.html _site/index.html
 
 pushlive:
+	pwd | grep live$$ || false
 	git init
-	git config user.name "live"
-	git config user.email "live@localhost"
+	git config user.name live
+	git config user.email live@localhost
 	git remote add origin https://github.com/susam/muboard.git
 	git checkout -b live
 	git add .
