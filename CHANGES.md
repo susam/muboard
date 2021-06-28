@@ -1,6 +1,14 @@
 Changelog
 =========
 
+0.5.0 (UNRELEASED)
+------------------
+
+### Fixed
+
+- Fix broken `<footer>` element.
+
+
 0.4.0 (2021-04-06)
 ------------------
 

@@ -34,7 +34,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   /**
    * Version of this tool.
    */
-  const version = '0.4.0'
+  const version = '0.5.0-dev1'
 
   /**
    * Input textarea element is assigned to this variable.
@@ -303,11 +303,11 @@ Type ,help for help.
 Type ,example for demo.`
 
     footer = window.document.createElement('footer')
-    footer.innerHTML = `<footer">
+    footer.innerHTML = `
 <a href="https://github.com/susam/muboard">GitHub</a>
 <a href="https://twitter.com/intent/follow?screen_name=susam">Twitter</a>
 <a href="https://github.com/susam/muboard/blob/master/LICENSE.md">License</a>
-</footer>`
+`
 
     // Read initial input.
     if (textareaElements.length > 0) {
