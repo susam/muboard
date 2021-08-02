@@ -7,6 +7,7 @@ Changelog
 ### Fixed
 
 - Fix broken `<footer>` element.
+- Upgrade to TeXMe 1.0.0 for rendering.
 
 
 0.4.0 (2021-04-06)
@@ -94,6 +95,7 @@ Changelog
 - LaTeX support using MathJax.
 - Support for self-rendering distributable boards with a single line
   of HTML.
+- Use TeXMe 0.9.0 for rendering.
 - Editing commands:
   - `,clear`: Clear text input field and the board.
   - `,i`: Insert inline mathematics.

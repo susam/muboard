@@ -67,7 +67,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
    * Set default configuration options.
    */
   function setDefaultOptions () {
-    options.texmeURL = 'https://cdn.jsdelivr.net/npm/texme@0.9.0'
+    options.texmeURL = 'https://cdn.jsdelivr.net/npm/texme@1.0.0'
     options.renderDelay = 200
     options.footer = false
   }
