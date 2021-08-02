@@ -29,9 +29,9 @@ Contents
 * [Distributable Boards](#distributable-boards)
 * [Features](#features)
 * [Why?](#why)
-* [Channels](#channels)
 * [License](#license)
 * [Support](#support)
+* [More](#more)
 
 
 Get Started
@@ -141,34 +141,16 @@ Why?
 ----
 
 Muboard was created originally for Offbeat Computation Club [analytic
-number theory meetings][meet] that I host frequently. During the
-meetings, I needed a place to type out mathematics formulas and render
-them quickly. I chose to write a tiny non-WSYIWYG tool because I
-prefer such tools. It also helps in keeping the LaTeX snippets in an
-HTML file that can render itself using JavaScript.
+number theory meetings][meet] that I host. During the meetings, I
+needed a place to type out mathematics formulas and render them
+quickly. I chose to write a tiny non-WSYIWYG tool because I prefer
+such tools. It also helps in keeping the LaTeX snippets in an HTML
+file that can render itself using JavaScript.
 
 The name *Muboard* is a reference to the Möbius function *μ(n)* which
 was the first function definition we discussed using this tool.
 
 [meet]: https://offbeat.cc/#iant
-
-
-Channels
---------
-
-The following channels are available for asking questions, seeking
-help, and receiving updates regarding this project:
-
-- Twitter: [@susam](https://twitter.com/intent/follow?screen_name=susam)
-- Matrix: [#susam:matrix.org](https://matrix.to/#/#susam:matrix.org)
-- Freenode: [#susam](https://webchat.freenode.net/#susam)
-- Reddit: [r/susam](https://reddit.com/r/susam)
-- GitHub: [muboard/issues](http://github.com/susam/muboard/issues)
-
-You are welcome to follow or subscribe to one or more of these channels
-to receive updates and ask questions about this project. The Freenode and
-Matrix channels are bridged together, so if you join one of them, you
-will automatically receive the updates from the other one too.
 
 
 License
@@ -191,3 +173,11 @@ To report bugs, suggest improvements, or ask questions,
 [create issues][issues].
 
 [issues]: https://github.com/susam/muboard/issues
+
+
+More
+----
+
+If you like this project, [follow me on Twitter][Twitter URL] or check
+out the related projects [TeXMe](https://github.com/susam/texme) and
+[MathBin](https://github.com/susam/mathbin).
