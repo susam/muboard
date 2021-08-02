@@ -19,7 +19,7 @@ desktop screen to others during real-world or virtual meetings.
 [Twitter SVG]: https://img.shields.io/badge/twitter-%40susam-%231da1f2
 [Twitter URL]: https://twitter.com/intent/follow?screen_name=susam
 
-<!-- Muboard 0.4.0 -->
+<!-- Muboard 0.5.0 -->
 
 
 Contents
@@ -56,7 +56,7 @@ copy and paste the code below into an HTML file with `.html`
 extension:
 
 ```html
-<!DOCTYPE html><script src="https://cdn.jsdelivr.net/npm/muboard@0.4.0"></script><textarea>
+<!DOCTYPE html><script src="https://cdn.jsdelivr.net/npm/muboard@0.5.0"></script><textarea>
 
 # The Möbius function
 
@@ -122,6 +122,8 @@ Features
 * Vertical splits.
 * Input is just LaTeX, Markdown, and HTML. Avoids any new syntax.
 * Conforms to CommonMark specification of Markdown.
+* Conforms to GitHub Flavored Markdown (GFM), a strict superset of
+  CommonMark.
 * Supports a [subset of LaTeX][macros] using MathJax.
 * Supports creating self-rendering distributable boards with a single
   line of HTML.
