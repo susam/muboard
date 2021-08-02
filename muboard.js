@@ -121,6 +121,8 @@ main > section > section {
 }
 main > section > section:first-child {padding-left: 0}
 main > section > section:last-child {padding-right: 0}
+table {border-collapse: collapse}
+th, td {border: thin solid #bed; padding: 0.3em 0.4em; text-align: left}
 footer {margin: 1em 0; text-align: center; display: none}
 footer a {margin-right: 1em}
 footer a:last-child {margin-right: 0}

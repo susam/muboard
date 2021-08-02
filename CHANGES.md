@@ -7,7 +7,9 @@ Changelog
 ### Fixed
 
 - Fix broken `<footer>` element.
-- Upgrade to TeXMe 1.0.0 for rendering.
+- Upgrade to TeXMe 1.0.0 for rendering to support GitHub Flavored
+  Markdown (GFM).
+- Style table with collapsed borders.
 
 
 0.4.0 (2021-04-06)
