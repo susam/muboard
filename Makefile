@@ -13,12 +13,17 @@ pushlive:
 	git init
 	git config user.name live
 	git config user.email live@localhost
-	git remote add origin https://github.com/susam/muboard.git
+	# Prepare live branch.
 	git checkout -b live
 	git add .
 	git commit -m "Publish live ($$(date -u +"%Y-%m-%d %H:%M:%S"))"
 	git log
+	# Publish to https://muboard.net/ via github.com/susam/muboard.
+	git remote add origin https://github.com/susam/muboard.git
 	git push -f origin live
+	# Publish to https://muboard.github.io/ (mirror).
+	git remote add mirror https://github.com/muboard/muboard.github.io.git
+	git push -f mirror live
 
 live: site
 	rm -rf /tmp/live
