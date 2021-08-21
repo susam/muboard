@@ -34,7 +34,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   /**
    * Version of this tool.
    */
-  const version = '0.5.0'
+  const version = '0.5.1'
 
   /**
    * Input textarea element is assigned to this variable.

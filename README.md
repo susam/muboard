@@ -19,7 +19,7 @@ desktop screen to others during real-world or virtual meetings.
 [Twitter SVG]: https://img.shields.io/badge/twitter-%40susam-%231da1f2
 [Twitter URL]: https://twitter.com/intent/follow?screen_name=susam
 
-<!-- Muboard 0.5.0 -->
+<!-- Muboard 0.5.1 -->
 
 
 Contents
@@ -44,7 +44,7 @@ Here is an example screenshot that shows how Muboard with some content
 looks like:
 
 <div align="center">
-<img width="800" src="https://i.imgur.com/7Pz2103.png">
+<img width="800" src="https://i.imgur.com/S6egQzg.png">
 </div>
 
 
@@ -56,7 +56,7 @@ copy and paste the code below into an HTML file with `.html`
 extension:
 
 ```html
-<!DOCTYPE html><script src="https://cdn.jsdelivr.net/npm/muboard@0.5.0"></script><textarea>
+<!DOCTYPE html><script src="https://cdn.jsdelivr.net/npm/muboard@0.5.1"></script><textarea>
 
 # The Möbius function
 

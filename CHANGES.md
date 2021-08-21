@@ -1,6 +1,14 @@
 Changelog
 =========
 
+0.5.1 (2021-08-21)
+------------------
+
+## Fixed
+
+- Fix typo in the built-in example article.
+
+
 0.5.0 (2021-08-02)
 ------------------
 
