@@ -65,7 +65,7 @@ defined as follows:
 
 $$ \mu(1) = 1; $$
 
-If $ n > 1, $ write $ n = p_1^{a_1} \dots p_2^{a_k} $ (prime
+If $ n > 1, $ write $ n = p_1^{a_1} \dots p_k^{a_k} $ (prime
 factorization). Then
 
 \begin{align*}
