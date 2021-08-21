@@ -32,7 +32,7 @@ Perform the following tasks for every release:
 
         git commit -em "Set version to $VERSION"
         git tag $VERSION -m "Muboard $VERSION"
-        git push origin master $VERSION 
+        git push origin master $VERSION
 
   - Publish package.
 
