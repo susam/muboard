@@ -145,7 +145,7 @@ Why?
 Muboard was created originally for Offbeat Computation Club [analytic
 number theory meetings][meet] that I host. During the meetings, I
 needed a place to type out mathematics formulas and render them
-quickly. I chose to write a tiny non-WSYIWYG tool because I prefer
+quickly. I chose to write a tiny non-WYSIWYG tool because I prefer
 such tools. It also helps in keeping the LaTeX snippets in an HTML
 file that can render itself using JavaScript.
 
