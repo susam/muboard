@@ -310,11 +310,14 @@ footer a:hover, a:active {color: #06f}
     const urlParams = new URLSearchParams(window.location.search)
     const urlEncodedSource = urlParams.get("source")
     let decodedSource
-    try {
-      decodedSource = atob(urlEncodedSource)
-    } catch (e) {
-      decodedSource = null
+    if (urlEncodedSource) {
+      try {
+        decodedSource = atob(urlEncodedSource)
+      } catch (e) {
+        decodedSource = null
+      }
     }
+
     board = window.document.createElement('main')
     input = window.document.createElement('textarea')
     input.placeholder = `Write content in LaTeX + Markdown format here.
