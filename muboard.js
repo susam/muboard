@@ -285,9 +285,20 @@ footer a:hover, a:active {color: #06f}
         replaceCommand(',version', '', '')
         showVersion()
         break
+      case ',share':
+        replaceCommand(',share', '', '')
+        render()
+        setTimeout(handleShare, 10)
+        break
       default:
         delayedRender()
     }
+  }
+
+  function handleShare() {
+    const url = new URL(window.location)
+    url.search = new URLSearchParams({ 'source': btoa(input.value) })
+    window.prompt("Copy this URL", url)
   }
 
   /**
@@ -296,6 +307,14 @@ footer a:hover, a:active {color: #06f}
   function setupPage () {
     const textareaElements = window.document.getElementsByTagName('textarea')
 
+    const urlParams = new URLSearchParams(window.location.search)
+    const urlEncodedSource = urlParams.get("source")
+    let decodedSource
+    try {
+      decodedSource = atob(urlEncodedSource)
+    } catch (e) {
+      decodedSource = null
+    }
     board = window.document.createElement('main')
     input = window.document.createElement('textarea')
     input.placeholder = `Write content in LaTeX + Markdown format here.
@@ -312,7 +331,9 @@ Type ,example for demo.`
 `
 
     // Read initial input.
-    if (textareaElements.length > 0) {
+    if (decodedSource) {
+      input.value = decodedSource
+    } else if (textareaElements.length > 0) {
       input.value = textareaElements[0].value.trim()
       textareaElements[0].remove()
     } else {
