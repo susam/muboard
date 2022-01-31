@@ -324,7 +324,9 @@ footer a:hover, a:active {color: #06f}
 
 Type ,help for help.
 
-Type ,example for demo.`
+Type ,example for demo.
+
+Type ,share to share your muboard.`
 
     footer = window.document.createElement('footer')
     footer.innerHTML = `
