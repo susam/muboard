@@ -1,6 +1,6 @@
 {
   "name": "muboard",
-  "version": "0.5.2",
+  "version": "0.5.3-dev",
   "description": "Self-rendering, interactive, and distributable mathematics chalkboards with support for Markdown and LaTeX",
   "main": "muboard.js",
   "files": [

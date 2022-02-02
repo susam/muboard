@@ -19,8 +19,6 @@ desktop screen to others during real-world or virtual meetings.
 [Twitter SVG]: https://img.shields.io/badge/twitter-%40susam-%231da1f2
 [Twitter URL]: https://twitter.com/intent/follow?screen_name=susam
 
-<!-- Muboard 0.5.1 -->
-
 
 Contents
 --------
@@ -29,6 +27,7 @@ Contents
 * [Distributable Boards](#distributable-boards)
 * [Features](#features)
 * [Why?](#why)
+* [Mirror](#mirror)
 * [License](#license)
 * [Support](#support)
 * [More](#more)
@@ -56,7 +55,7 @@ copy and paste the code below into an HTML file with `.html`
 extension:
 
 ```html
-<!DOCTYPE html><script src="https://cdn.jsdelivr.net/npm/muboard@0.5.1"></script><textarea>
+<!DOCTYPE html><script src="https://cdn.jsdelivr.net/npm/muboard@0.5.2"></script><textarea>
 
 # The Möbius function
 
@@ -153,6 +152,15 @@ The name *Muboard* is a reference to the Möbius function *μ(n)* which
 was the first function definition we discussed using this tool.
 
 [meet]: https://offbeat.cc/#iant
+
+
+Mirror
+------
+
+The primary Muboard website is [muboard.net](https://muboard.net/).
+
+A replica of the website is available at
+[muboard.github.io](https://muboard.github.io/).
 
 
 License
