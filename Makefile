@@ -1,18 +1,25 @@
 site:
-	rm -rf _site
-	mkdir -p _site/examples
-	cp -R web/* _site/
+	rm -rf _site/ && mkdir -p _site/examples/
+	git -C _site/ clone -b 1.2.0 --depth 1 https://github.com/susam/texme.git
+	git -C _site/ clone -b v4.0.12 --depth 1 https://github.com/markedjs/marked.git
+	git -C _site/ clone -b 3.2.0 --depth 1 https://github.com/mathjax/mathjax.git
+	rm -rf _site/texme/.git
+	rm -rf _site/marked/.git/
+	rm -rf _site/mathjax/.git/
+	cp web/* _site/
+	cp muboard.js _site/
 	for f in examples/*.html; do \
-	    sed 's|../muboard.js|https://cdn.jsdelivr.net/npm/muboard@0.5.1|' "$$f" > \
-	        _site/examples/"$$(basename "$$f")"; done
-	cp muboard.html muboard.js muboard.min.js _site/
-	cp muboard.html _site/index.html
+	    sed -e 's|\.\./muboard.js|muboard.js|' \
+	        -e 's|<script|<script src="options.js"></script><script|' \
+	        "$$f" > _site/"$${f#*/}"; done
+	sed 's|<script>window.*</script>|<script src="options.js"></script>|' \
+	    muboard.html > _site/index.html
 
 pushlive:
 	pwd | grep live$$ || false
 	git init
-	git config user.name susam
-	git config user.email susam@susam.in
+	git config user.name live
+	git config user.email live@localhost
 	# Prepare live branch.
 	git checkout -b live
 	git add .
