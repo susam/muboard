@@ -1,7 +1,7 @@
 /*
 The MIT License (MIT)
 
-Copyright (c) 2021 Susam Pal
+Copyright (c) 2021-2022 Susam Pal
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -34,7 +34,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   /**
    * Version of this tool.
    */
-  const version = '0.5.1'
+  const version = '0.5.2'
 
   /**
    * Input textarea element is assigned to this variable.
@@ -564,7 +564,7 @@ for more details.
 <div style="font-size: small; text-align: center">
 <p>
 ${name} is created and maintained by <a
-href="https://twitter.com/intent/follow?screen_name=susam">Susam</a>.
+href="https://twitter.com/susam">Susam</a>.
 </p>
 <p>
 The source code is available on
@@ -615,7 +615,7 @@ $$
 <article>
 <h1>${name} ${version}</h1>
 <p>
-Copyright &copy; 2021 Susam Pal
+Copyright &copy; 2021-2022 Susam Pal
 </p>
 <p>
 This is free and open source software. You can use, copy, modify,

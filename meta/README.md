@@ -1,6 +1,18 @@
 Developer Notes
 ===============
 
+This document is useful for developers of Muboard.
+
+
+Dependency Upgrade Checklist
+----------------------------
+
+  - Update Muboard version in muboard.js.
+  - Update TeXMe version in Makefile.
+  - Update Markdown renderer version in Makefile.
+  - Update MathJax version in Makefile.
+
+
 Release Checklist
 -----------------
 
@@ -9,9 +21,8 @@ Perform the following tasks for every release:
   - Update version in muboard.js.
   - Update version in README.md.
   - Update version in package.json.
-  - Update version in Makefile.
   - Update copyright notice in LICENSE.md.
-  - Update copyright notice in muboard.js.
+  - Update copyright notice in muboard.js (at 2 places).
   - Update CHANGES.md.
   - Run tests.
 

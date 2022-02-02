@@ -1,12 +1,11 @@
 {
   "name": "muboard",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Self-rendering, interactive, and distributable mathematics chalkboards with support for Markdown and LaTeX",
   "main": "muboard.js",
   "files": [
     "muboard.js",
-    "muboard.min.js",
-    "muboard.html"
+    "muboard.min.js"
   ],
   "keywords": [
     "markdown",
@@ -18,7 +17,7 @@
   "homepage": "https://muboard.net/",
   "bugs": "https://github.com/susam/muboard/issues",
   "license": "MIT",
-  "author": "Susam Pal <susam@susam.in> (https://susam.in/)",
+  "author": "Susam Pal <susam@susam.net> (https://susam.net/)",
   "repository": "github:susam/muboard",
   "devDependencies": {
     "jsdoc": "latest",
