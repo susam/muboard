@@ -14,7 +14,7 @@ desktop screen to others during real-world or virtual meetings.
 [Muboard SVG]: https://img.shields.io/badge/view-muboard-brightgreen
 [Muboard URL]: https://muboard.net/
 [Demo SVG]: https://img.shields.io/badge/view-demo-brightgreen
-[Demo URL]: https://muboard.net/examples/mu.html
+[Demo URL]: https://muboard.net/mu.html
 [License SVG]: https://img.shields.io/badge/license-MIT-%233ea639
 [Twitter SVG]: https://img.shields.io/badge/twitter-%40susam-%231da1f2
 [Twitter URL]: https://twitter.com/intent/follow?screen_name=susam
@@ -86,7 +86,7 @@ $$
 
 Now open this file with a web browser. This is a self-rendering
 distributable board file. It renders itself to look like this:
-[mu.html](https://muboard.net/examples/mu.html).
+[mu.html](https://muboard.net/mu.html).
 
 
 ### Valid HTML5
@@ -101,8 +101,8 @@ example works just fine because all web browsers follow the
 
 For the sake of completeness and correctness, here is a minimal but
 complete and valid HTML example:
-[valid-html5.html](https://muboard.net/examples/valid-html5.html)
-([source](examples/valid-html5.html)). It has a few more lines of code
+[mu-html5.html](https://muboard.net/mu-html5.html)
+([source](examples/mu-html5.html)). It has a few more lines of code
 to ensure that this HTML5 code validates successfully at
 [validator.w3.org][validator]. In case you are wondering, a valid
 HTML5 document does not require explicit `<head>`, `<body>`, or the
