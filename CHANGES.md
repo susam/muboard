@@ -1,6 +1,14 @@
 Changelog
 =========
 
+0.5.2 (UNRELEASED)
+------------------
+
+## Fixed
+
+- Preserve TeXMe options set by the user.
+
+
 0.5.1 (2021-08-21)
 ------------------
 

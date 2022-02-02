@@ -87,6 +87,17 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     }
   }
 
+  /**
+   * Preserve TeXMe options set by user and add additional TeXMe
+   * options required to make Muboard work.
+   */
+  function setTeXMeOptions () {
+    if (typeof window.texme === 'undefined') {
+      window.texme = {}
+    }
+    window.texme.renderOnLoad = false
+  }
+
   const greenStyle = `
 html {height: 100%}
 body {
@@ -641,7 +652,7 @@ for details.
   function main () {
     setDefaultOptions()
     setWindowOptions()
-    window.texme = { renderOnLoad: false }
+    setTeXMeOptions()
     loadjs(options.texmeURL)
     window.addEventListener('load', setupPage)
   }
