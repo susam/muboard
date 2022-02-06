@@ -4,7 +4,7 @@ Changelog
 0.5.2 (2022-02-02)
 ------------------
 
-## Fixed
+### Fixed
 
 - Preserve TeXMe options set by the user.
 
@@ -12,7 +12,7 @@ Changelog
 0.5.1 (2021-08-21)
 ------------------
 
-## Fixed
+### Fixed
 
 - Fix typo in the built-in example article.
 
