@@ -141,12 +141,12 @@ Features
 Why?
 ----
 
-Muboard was created originally for a [analytic number theory club
-meetings][meet] that I host. During the meetings, I needed a place to
-type out mathematics formulas and render them quickly. I chose to
-write a tiny non-WSYIWYG tool because I prefer such tools. It also
-helps in keeping the LaTeX snippets in an HTML file that can render
-itself using JavaScript.
+Muboard was created originally for [analytic number theory club
+meetings][meet] that I used to host in 2021. During the meetings, I
+needed a place to type out mathematics formulas and render them
+quickly. I chose to write a tiny non-WSYIWYG tool because I prefer
+such tools. It also helps in keeping the LaTeX snippets in an HTML
+file that can render itself using JavaScript.
 
 The name *Muboard* is a reference to the Möbius function *μ(n)* which
 was the first function definition we discussed using this tool.
