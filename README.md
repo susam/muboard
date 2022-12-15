@@ -141,17 +141,17 @@ Features
 Why?
 ----
 
-Muboard was created originally for Offbeat Computation Club [analytic
-number theory meetings][meet] that I host. During the meetings, I
-needed a place to type out mathematics formulas and render them
-quickly. I chose to write a tiny non-WSYIWYG tool because I prefer
-such tools. It also helps in keeping the LaTeX snippets in an HTML
-file that can render itself using JavaScript.
+Muboard was created originally for a [analytic number theory club
+meetings][meet] that I host. During the meetings, I needed a place to
+type out mathematics formulas and render them quickly. I chose to
+write a tiny non-WSYIWYG tool because I prefer such tools. It also
+helps in keeping the LaTeX snippets in an HTML file that can render
+itself using JavaScript.
 
 The name *Muboard* is a reference to the Möbius function *μ(n)* which
 was the first function definition we discussed using this tool.
 
-[meet]: https://offbeat.cc/#iant
+[meet]: https://susam.net/club/iant/
 
 
 Mirror
@@ -190,4 +190,4 @@ More
 
 If you like this project, [follow me on Twitter][Twitter URL] or check
 out the related projects [TeXMe](https://github.com/susam/texme) and
-[MathBin](https://github.com/susam/mathbin).
+[MathB](https://github.com/susam/mathb).
