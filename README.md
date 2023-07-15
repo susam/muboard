@@ -12,9 +12,9 @@ desktop screen to others during real-world or virtual meetings.
 [![Twitter][Twitter SVG]][Twitter URL]
 
 [Muboard SVG]: https://img.shields.io/badge/view-muboard-brightgreen
-[Muboard URL]: https://muboard.net/
+[Muboard URL]: https://susam.github.io/muboard/
 [Demo SVG]: https://img.shields.io/badge/view-demo-brightgreen
-[Demo URL]: https://muboard.net/mu.html
+[Demo URL]: https://susam.github.io/muboard/mu.html
 [License SVG]: https://img.shields.io/badge/license-MIT-%233ea639
 [Twitter SVG]: https://img.shields.io/badge/twitter-%40susam-%231da1f2
 [Twitter URL]: https://twitter.com/intent/follow?screen_name=susam
@@ -85,7 +85,7 @@ $$
 
 Now open this file with a web browser. This is a self-rendering
 distributable board file. It renders itself to look like this:
-[mu.html](https://muboard.net/mu.html).
+[mu.html][Demo URL].
 
 
 ### Valid HTML5
@@ -100,7 +100,7 @@ example works just fine because all web browsers follow the
 
 For the sake of completeness and correctness, here is a minimal but
 complete and valid HTML example:
-[mu-html5.html](https://muboard.net/mu-html5.html)
+[mu-html5.html](https://susam.github.io/muboard/mu-html5.html)
 ([source](examples/mu-html5.html)). It has a few more lines of code
 to ensure that this HTML5 code validates successfully at
 [validator.w3.org][validator]. In case you are wondering, a valid
@@ -151,16 +151,7 @@ file that can render itself using JavaScript.
 The name *Muboard* is a reference to the Möbius function *μ(n)* which
 was the first function definition we discussed using this tool.
 
-[meet]: https://susam.net/club/iant/
-
-
-Mirror
-------
-
-The primary Muboard website is [muboard.net](https://muboard.net/).
-
-A replica of the website is available at
-[muboard.github.io](https://muboard.github.io/).
+[meet]: https://susam.net/maze/meet/iant/
 
 
 License

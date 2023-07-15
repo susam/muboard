@@ -25,14 +25,9 @@ pushlive:
 	git add .
 	git commit -m "Publish live ($$(date -u +"%Y-%m-%d %H:%M:%S"))"
 	git log
-	# Publish main website to https://muboard.net/.
+	# Publish website to https://susam.github.io/muboard/.
 	git remote add origin https://github.com/susam/muboard.git
 	git push -f origin live
-	# Publish mirror to https://muboard.github.io/.
-	git rm CNAME
-	git commit -m "Remove CNAME file from mirror"
-	git remote add mirror https://github.com/muboard/muboard.github.io.git
-	git push -f mirror live
 
 live: site
 	rm -rf /tmp/live
