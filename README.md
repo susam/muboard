@@ -9,15 +9,15 @@ desktop screen to others during real-world or virtual meetings.
 [![View Muboard][Muboard SVG]][Muboard URL]
 [![View Demo][Demo SVG]][Demo URL]
 [![MIT License][License SVG]][L]
-[![Twitter][Twitter SVG]][Twitter URL]
+[![Mastodon][Mastodon SVG]][Mastodon URL]
 
 [Muboard SVG]: https://img.shields.io/badge/view-muboard-brightgreen
 [Muboard URL]: https://susam.github.io/muboard/
 [Demo SVG]: https://img.shields.io/badge/view-demo-brightgreen
 [Demo URL]: https://susam.github.io/muboard/mu.html
 [License SVG]: https://img.shields.io/badge/license-MIT-%233ea639
-[Twitter SVG]: https://img.shields.io/badge/twitter-%40susam-%231da1f2
-[Twitter URL]: https://twitter.com/intent/follow?screen_name=susam
+[Mastodon SVG]: https://img.shields.io/badge/mastodon-%40susam-%236364ff
+[Mastodon URL]: https://mastodon.social/@susam
 
 
 Contents
@@ -179,6 +179,9 @@ To report bugs, suggest improvements, or ask questions,
 More
 ----
 
-If you like this project, [follow me on Twitter][Twitter URL] or check
-out the related projects [TeXMe](https://github.com/susam/texme) and
-[MathB](https://github.com/susam/mathb).
+See [TeXMe](https://github.com/susam/texme), a lightweight utility to
+create self-rendering and distributable Markdown + LaTeX documents.
+
+See [MathB](https://github.com/susam/mathb), a mathematics pastebin
+built using TeXMe. This is the oldest mathematics pastebin that is
+still alive on the web and serving its community of users.
