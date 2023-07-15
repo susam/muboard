@@ -1,0 +1,29 @@
+# Ignore Vim swap files.
+*.sw?
+
+# Ignore generated files and directories.
+/_site/
+/package-lock.json
+/yarn.lock
+/node_modules/
+/docs/
+/.nyc_output/
+/coverage/
+
+# Ignore macOS desktop services store files.
+.DS_Store
+
+# Ignore personal TODO files in case-insensitive manner.
+[tT][oO][dD][oO].*
+
+# Ignore personal throwaway experiments.
+foo.*
+bar.*
+baz.*
+qux.*
+
+# Ignore personal backup files.
+*.bkp
+
+# Ignore JetBrains IDE files
+.idea/
